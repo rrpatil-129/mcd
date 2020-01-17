@@ -3,6 +3,7 @@ import json
 
 def lambda_handler(event, context):
     # TODO implement
+    print("Inside lambda function")
     return {
         'statusCode': 200,
         'body': json.dumps('Hello from Lambda!')
