@@ -1,12 +1,22 @@
-import flask
-
-app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+import json
 
 
-@app.route('/home', methods=['GET'])
-def home():
-    return "Wel-Come to McDonalds Project"
+def lambda_handler(event, context):
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
 
-
-app.run(host='0.0.0.0')
+# import flask
+#
+# app = flask.Flask(__name__)
+# app.config["DEBUG"] = True
+#
+#
+# @app.route('/home', methods=['GET'])
+# def home():
+#     return "Wel-Come to McDonalds Project"
+#
+#
+# app.run(host='0.0.0.0')
